@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items</title>
+    <link rel="stylesheet" href="css/items.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body onload="loadItemList()">
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand"><img src="images/logo.png" id="home-logo" onclick="refresh('home.html')"></li>
+                <li class="clickable_items"><img src="images/home.png" class="icons_nav"><a onclick="redirect_home()">Home</a></li>
+                <li class="clickable_items"><img src="images/items.png" class="icons_nav"><a onclick="redirect_items()">Items</a></li>
+                <li class="clickable_items"><img src="images/logout.png" class="icons_nav"><a onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+
+        <div class="w3-container w3-half w3-margin-top">
+
+            <p>
+                <input id="itemId" class="w3-input" type="hidden" style="width:90%">
+            </p>
+
+            <p>
+                <label>ItemBrand</label>
+                <input id="brand" class="w3-input" type="text" style="width:90%" required>
+                </p>
+            <p>
+                <label>ItemCode</label>
+                <input id="code" class="w3-input" type="text" style="width:90%" required>
+                </p>
+            <p>
+                <label>ItemDescription</label>
+                <input id="description" class="w3-input" type="text" style="width:90%" required>
+                </p>
+            <p>
+                <button id="btnSaveItem" onclick="saveItem()" class="w3-button w3-section w3-teal w3-ripple">Add Item</button></p>
+
+        </div>
+
+        <div id="itemData" class="w3-container">
+
+        </div>
+
+    </div>
+    <script src="js/items.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/ajax.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sign Up</title>
+	<link rel="stylesheet" href="css/signup.css">
+	<link rel="icon" href="images/logo.png">
+</head>
+<body>
+	<div class="signup-page">
+	  <div class="form">
+		<form class="register-form">
+		  <img src="images/logo.png" id="signup-form-logo" onclick="refresh('signup.html')">
+		  <input type="text" id="firstname" placeholder="Firstname"/>
+		  <input type="text" id="lastname" placeholder="Lastname"/>
+		  <input type="email" id="emailaddress" placeholder="Email address"/>
+		  <input type="password" id="password" placeholder="Password"/>
+		  <button type="button" id="create_usr_btn" onclick="create_user()">Create</button>
+		  <p class="message">Already registered? <a onclick="signin()">Sign In</a></p>
+		</form>
+	  </div>
+	</div>
+	<script src="js/ajax.js"></script>
+	<script src="js/signup.js"></script>
+	<script src="js/global.js"></script>
+</body>
+</html>

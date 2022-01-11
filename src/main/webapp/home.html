@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/home.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="icon" href="images/logo.png">
+</head>
+<body onload="return home_page()">
+    <div id="wrapper">
+	
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand"><img src="images/logo.png" id="home-logo" onclick="refresh('home.html')"></li>
+                <li class="clickable_items"><img src="images/home.png" class="icons_nav"><a onclick="refresh('home.html')">Home</a></li>
+                <li class="clickable_items"><img src="images/items.png" class="icons_nav"><a onclick="redirect_items()">Items</a></li>
+                <li class="clickable_items"><img src="images/logout.png" class="icons_nav"><a onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+		
+        <!-- Page content -->
+        <div id="page-content-wrapper">
+		
+            <div class="content-header">
+                <div id="user_info"><img src="images/user.png" id="user_icon"><p id="user_text">Default user</p></div>
+            </div>
+
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+				<p id="home_text">Home</p>
+				<div id="option_tabs">
+					<div id="items_tab" onclick="redirect_items()"><p>Items</p></div>
+				</div>
+            </div>
+			
+        </div>
+		
+    </div>
+	<script src="js/home.js"></script>
+	<script src="js/global.js"></script>
+</body>
+</html>
